@@ -1,16 +1,21 @@
-<script setup>
-</script>
-
 <template>
   <header>
-    <div id="title">PROXY CHECKER</div>
+    <div id="header-title">&laquo; PROXY CHECKER &raquo;</div>
   </header>
-    <div id="left">left</div>
-    <div id="center-top">c-top</div>
-    <div id="center-bottom">c-bottom</div>
-    <div id="right">right</div>
+  <div id="left"></div>
+
+  <div id="center">
+    <proxies></proxies>
+  </div>
+
+  <div id="right"></div>
   <footer>(C) 2023</footer>
 </template>
+
+<script setup>
+import Proxies from "@/components/Proxies.vue";
+
+</script>
 
 <style scoped>
 

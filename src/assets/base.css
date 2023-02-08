@@ -1,4 +1,52 @@
-#title {
+button[disabled] {
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+input, textarea {
+    border: 1px solid gray;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px;
+}
+
+textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100px;
+    border-color: #b9b9b9;
+}
+
+::placeholder {
+    color: #d5ccd5;
+}
+
+#header-title {
     font-weight: bold;
     color: #385c83;
+    font-size: 1.6em;
+}
+
+.wrapper {
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.load-button {
+    user-select: none;
+    color: #fff;
+    background: #d44b38;
+    margin-top: 5px;
+    padding: 5px 20px;
+    width: 150px;
+    border: none;
+    border-radius: 3px;
+}
+
+.load-button:hover {
+    background: #e85f4c;
+}
+
+.load-button:active {
+    background: #c03c29;
 }

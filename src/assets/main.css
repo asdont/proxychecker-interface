@@ -4,7 +4,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Blinker', Open Sans, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 5px 0;
 }
 
 html {
@@ -17,13 +21,12 @@ html {
     height: 100vh;
     display: grid;
     grid-template-columns: auto minmax(auto, 800px) auto;
-    grid-template-rows: 60px 1fr 1fr 40px;
+    grid-template-rows: 60px 1fr 40px;
     gap: 0 0;
     grid-auto-flow: row;
     grid-template-areas:
     "header header header"
-    "left center-top right"
-    "left center-bottom right"
+    "left center right"
     "footer footer footer";
 }
 
@@ -33,6 +36,7 @@ header {
     grid-area: header;
     text-align: center;
     line-height: 60px;
+    border-radius: 3px;
     border-bottom: 1px solid rgb(245 245 245);
     background: linear-gradient(45deg, rgba(13,56,103,1) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,1) 80%, rgba(13,56,103,1) 100%);
 }
@@ -41,14 +45,9 @@ header {
     grid-area: left;
 }
 
-#center-top {
+#center {
     align-self: stretch;
-    grid-area: center-top;
-}
-
-#center-bottom {
-    align-self: stretch;
-    grid-area: center-bottom;
+    grid-area: center;
 }
 
 #right {
@@ -60,7 +59,24 @@ footer {
     margin: auto;
 }
 
-/*#app * {*/
-/*    border: 1px solid #ececec;*/
-/*    position: relative;*/
-/*}*/
+@font-face {
+    font-family: 'Blinker';
+    font-weight: 400;
+    font-style: auto;
+    font-display: auto;
+    unicode-range: U+000-5FF;
+    src: local("Blinker"), url('./fonts/Blinker-Regular.ttf') format("TrueType");
+}
+
+@font-face {
+    font-family: 'Blinker';
+    font-weight: 700;
+    font-style: auto;
+    font-display: auto;
+    unicode-range: U+000-5FF;
+    src: local("Blinker"), url('./fonts/Blinker-Bold.ttf') format("TrueType");
+}
+
+#app #center{
+    border: 1px solid gray;
+}
