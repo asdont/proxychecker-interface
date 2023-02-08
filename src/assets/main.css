@@ -1,12 +1,66 @@
 @import './base.css';
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    font-size: 18px;
+    min-width: 220px;
 }
 
 #app {
-
+    color: #5c5c5c;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto minmax(auto, 800px) auto;
+    grid-template-rows: 60px 1fr 1fr 40px;
+    gap: 0 0;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "header header header"
+    "left center-top right"
+    "left center-bottom right"
+    "footer footer footer";
 }
+
+header {
+    justify-self: stretch;
+    align-self: stretch;
+    grid-area: header;
+    text-align: center;
+    line-height: 60px;
+    border-bottom: 1px solid rgb(245 245 245);
+    background: linear-gradient(45deg, rgba(13,56,103,1) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,1) 80%, rgba(13,56,103,1) 100%);
+}
+
+#left {
+    grid-area: left;
+}
+
+#center-top {
+    align-self: stretch;
+    grid-area: center-top;
+}
+
+#center-bottom {
+    align-self: stretch;
+    grid-area: center-bottom;
+}
+
+#right {
+    grid-area: right;
+}
+
+footer {
+    grid-area: footer;
+    margin: auto;
+}
+
+/*#app * {*/
+/*    border: 1px solid #ececec;*/
+/*    position: relative;*/
+/*}*/
