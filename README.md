@@ -1,6 +1,6 @@
-## Customize configuration
+## Proxy Checker(interface)
 
-this is the interface for [Proxy Checker](https://github.com/asdont/proxychecker).
+This is the interface for [Proxy Checker](https://github.com/asdont/proxychecker).
 
 ## Vite
 
