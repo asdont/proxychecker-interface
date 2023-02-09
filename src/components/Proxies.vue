@@ -63,7 +63,7 @@ export default {
 
   data() {
     return {
-      proxiesIn: "http://127.0.0.1:80",
+      proxiesIn: "",
       proxiesOut: {},
       requestID: "",
 
