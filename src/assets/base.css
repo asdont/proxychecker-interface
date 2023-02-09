@@ -10,11 +10,53 @@ input, textarea {
     padding: 5px;
 }
 
+table {
+    width: 100%;
+    border: none;
+}
+
+thead th {
+    font-weight: bold;
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+tbody th {
+    font-weight: normal;
+    border-right: 1px solid gray;
+    padding: 5px;
+}
+
+tbody td {
+    padding: 5px;
+}
+
+#th-n {
+    border-right: 1px solid gray;
+}
+
+tbody tr:nth-child(odd){
+    background: #fff;
+}
+
+tbody tr:nth-child(even){
+    background: #F7F7F7;
+}
+
+tbody tr:nth-child(odd):hover{
+    background: #df674142;
+}
+
+tbody tr:nth-child(even):hover{
+    background: #df674142;
+}
+
 textarea {
-    min-width: 100%;
-    max-width: 100%;
+    width: 100%;
     min-height: 100px;
     border-color: #b9b9b9;
+    resize: vertical;
 }
 
 ::placeholder {
@@ -23,30 +65,42 @@ textarea {
 
 #header-title {
     font-weight: bold;
-    color: #385c83;
     font-size: 1.6em;
+    color: #d9643f;
 }
 
-.wrapper {
-    margin-bottom: 15px;
-    padding: 10px;
+#center hr {
+    margin-bottom: 25px;
 }
 
-.load-button {
+.btn {
     user-select: none;
     color: #fff;
-    background: #d44b38;
-    margin-top: 5px;
+    background: #df6741;
+    margin-top: 10px;
     padding: 5px 20px;
-    width: 150px;
+    width: 200px;
     border: none;
     border-radius: 3px;
 }
 
-.load-button:hover {
-    background: #e85f4c;
+.btn:hover {
+    background: #ec724c;
 }
 
-.load-button:active {
-    background: #c03c29;
+.btn:active {
+    background: #df6741;
+}
+
+.table-wrap {
+    overflow: auto;
+}
+
+.wrapper {
+    display: grid;
+    padding: 10px;
+}
+
+.wrapper button {
+    float: left;
 }

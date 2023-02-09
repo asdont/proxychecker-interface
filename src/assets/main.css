@@ -13,15 +13,15 @@ h1, h2, h3, h4, h5, h6 {
 
 html {
     font-size: 18px;
-    min-width: 220px;
+    min-width: 260px;
 }
 
 #app {
     color: #5c5c5c;
     height: 100vh;
     display: grid;
-    grid-template-columns: auto minmax(auto, 800px) auto;
-    grid-template-rows: 60px 1fr 40px;
+    grid-template-columns: auto minmax(auto, 1400px) auto;
+    grid-template-rows: 80px 1fr 50px;
     gap: 0 0;
     grid-auto-flow: row;
     grid-template-areas:
@@ -35,10 +35,8 @@ header {
     align-self: stretch;
     grid-area: header;
     text-align: center;
-    line-height: 60px;
     border-radius: 3px;
-    border-bottom: 1px solid rgb(245 245 245);
-    background: linear-gradient(45deg, rgba(13,56,103,1) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,1) 80%, rgba(13,56,103,1) 100%);
+    margin: 15px 0;
 }
 
 #left {
@@ -48,6 +46,7 @@ header {
 #center {
     align-self: stretch;
     grid-area: center;
+    text-align: center;
 }
 
 #right {
@@ -56,7 +55,7 @@ header {
 
 footer {
     grid-area: footer;
-    margin: auto;
+    margin: 5px auto;
 }
 
 @font-face {
@@ -75,8 +74,4 @@ footer {
     font-display: auto;
     unicode-range: U+000-5FF;
     src: local("Blinker"), url('./fonts/Blinker-Bold.ttf') format("TrueType");
-}
-
-#app #center{
-    border: 1px solid gray;
 }
