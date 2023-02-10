@@ -6,7 +6,7 @@
   <div id="left"></div>
 
   <div id="center">
-    <proxies></proxies>
+    <proxies :api="api"></proxies>
   </div>
 
   <div id="right"></div>
@@ -16,9 +16,23 @@
   </footer>
 </template>
 
-<script setup>
+<script>
 import Proxies from "@/components/Proxies.vue";
 
+export default {
+  name: 'App',
+  components: {
+    Proxies
+  },
+
+  data() {
+    return {
+      api: {
+        route: import.meta.env.VITE_API_V1,
+      }
+    }
+  }
+}
 </script>
 
 <style scoped>

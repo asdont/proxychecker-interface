@@ -61,6 +61,10 @@ import axios from "axios";
 export default {
   name: "Proxies",
 
+  props: {
+    api: Object,
+  },
+
   data() {
     return {
       proxiesIn: "",
@@ -92,7 +96,7 @@ export default {
       await axios(
           {
             method: 'post',
-            baseURL: import.meta.env.VITE_API_V1,
+            baseURL: this.api.route,
             url: '/proxies',
             data: this.proxiesIn
           }
@@ -112,11 +116,11 @@ export default {
     },
 
     async getProxiesByRequestID(requestID) {
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 30; i++) {
         await axios(
             {
               method: 'get',
-              baseURL: import.meta.env.VITE_API_V1,
+              baseURL: this.api.route,
               url: '/proxies/' + requestID,
             }
         )
