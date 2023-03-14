@@ -129,12 +129,14 @@ export default {
                 ),
             )
             .catch(err => {
-              console.log("get prxies by request id", err)
+              console.log("get proxies by request id", err)
             })
 
         if (this.proxiesOut.status === 'OK') {
           break
         }
+
+        console.log(this.proxiesOut.status)
 
         await this.timeout(2500)
       }
